@@ -1,5 +1,6 @@
+<!--Create and run a new project
 npm install -g @angular/cli
-ng new project
-cd project
+ng new project_name
+cd project_name
 ng serve
 #Lancer le serveur localhost:4200
