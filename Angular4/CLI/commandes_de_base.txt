@@ -8,3 +8,21 @@ ng serve
 ------Les commandes-------------------
 #Create a component
 ng g component components/user
+
+#Create a service
+ng g service services/data
+
+#Use a service 
+import { DataService } from './services/data.service';
+providers: [DataService]
+
+
+
+------Input-------------------
+#before to use databinding in a input in a form
+import {{ FormsModule } from '@angular/forms';
+imports:[...,FormsModule]
+
+
+------Event-------------------
+click,submit

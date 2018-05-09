@@ -1,0 +1,1 @@
+<li *ngFor="let element of elements"; let i=index">{{i}}-{{element}} </li>
