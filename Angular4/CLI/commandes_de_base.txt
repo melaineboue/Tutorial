@@ -16,12 +16,33 @@ ng g service services/data
 import { DataService } from './services/data.service';
 providers: [DataService]
 
+#Use Http 
+import {{ HttpModule } from '@angular/http';
+imports:[...,HttpModule]
+#injecter http dans tous les composant qui doivent l'utiliser
+constructor(public http:Http)
+#formatter en JSON avec rxjs
+import 
+import 'rxjs/add/operator/map
+this.http.get('...').map(res=> res.json());
+
+#Route
+import {{ RouterModule,Routes } from '@angular/router';
+const appRoutes:Routes =[
+	{path:'',component:UserComponent},
+	{path:'about',component:AboutComponent},
+	
+];
+
+imports:[RouterModule.forRoot(appRoutes)]
+
+
 
 
 ------Input-------------------
 #before to use databinding in a input in a form
-import {{ FormsModule } from '@angular/forms';
-imports:[...,FormsModule]
+import {{ HttpModule } from '@angular/http';
+imports:[...,HttpModule]
 
 
 ------Event-------------------
