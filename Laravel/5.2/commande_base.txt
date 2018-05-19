@@ -1,0 +1,14 @@
+#download the Laravel installer using Composer
+composer global require "laravel/installer"
+
+
+#Structure generale pour generer 
+php artisan make:xxx
+
+#Route
+	php artisan route:list
+	
+#Middleware
+#Créer un middleware
+php artisan make:middleware
+	
