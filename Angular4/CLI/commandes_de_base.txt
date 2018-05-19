@@ -32,7 +32,9 @@ const appRoutes:Routes =[
 	{path:'',component:UserComponent},
 	{path:'about',component:AboutComponent},
 	
-];
+
+#A mettre dans appModule, là où on foit inserer les 
+<router-outlet></router-outlet>
 
 imports:[RouterModule.forRoot(appRoutes)]
 

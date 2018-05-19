@@ -1,0 +1,4 @@
+$route = Route::get('bonjour/{name}-{id}',function ($name,$id){
+    return "Name: $name / id: $id";
+})->where('name','[a-zA-Z0-9\-]+')->where('id','[0-9]+');
+dd($route);
