@@ -28,3 +28,7 @@ return abort(404)
 #Request dans le controleur
 use \Request 
 dd(Request::ip());
+
+#Recuperer les variable passé en GET  "?g=ok"
+use \Input
+Input::get('q')
