@@ -2,3 +2,29 @@ $route = Route::get('bonjour/{name}-{id}',['as'=>'nomRoute',function ($name,$id)
     return "Name: $name / id: $id";
 }])->where('name','[a-zA-Z0-9\-]+')->where('id','[0-9]+');
 dd($route);
+
+#Grouper 
+
+Route::group(['prefix'=>'admin',function(){
+
+	#accessible à l'url "admin/bonjour
+	Route::get('bonjour',['as'=>'nomRoute',function (){
+		return "route";
+	}]);
+	
+});
+
+
+#Middleware :se met entre la route et le code à executer
+#Dans le fichier Kernel
+
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){});
+
+#Redirection  
+return redirect()->guest(url)
+return response('Unautorized.',401)
+return abort(404)
+
+#Request dans le controleur
+use \Request 
+dd(Request::ip());
