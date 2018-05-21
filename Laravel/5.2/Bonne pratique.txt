@@ -1,0 +1,4 @@
+#Créer implicitement des Routes avec les methodes controleur
+public function getPost(){}  //route accessible /post par get 
+public function postPost(){}  //route accessible /post par get 
+

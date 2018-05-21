@@ -1,0 +1,3 @@
+{{ $title }} : il echape le code HTML
+{!! $title !!} : il n'echape pas le code HTML
+
