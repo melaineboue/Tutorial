@@ -1,0 +1,3 @@
+#Numpy Arrays
+import numpy as np
+https://www.youtube.com/watch?v=rnw1qixAv1s&list=PLjgj6kdf_snaw8QnlhK5f3DzFDFKDU5f4&index=10
