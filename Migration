@@ -1,7 +1,0 @@
-#Migration Alembic & SQLAlchemy
-
-#Generer le fichier de migration
-alembic revision --autogenerate -m "Create temporal_data table" 
-
-#Appliquer la migration
-alembic upgrade head
