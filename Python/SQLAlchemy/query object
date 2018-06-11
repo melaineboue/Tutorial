@@ -1,0 +1,4 @@
+#The query object
+q = session.query(SomeMappedClass)
+
+http://docs.sqlalchemy.org/en/latest/orm/query.html
