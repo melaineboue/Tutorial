@@ -33,9 +33,23 @@ print(cc_cookie.cookie_id)
 #c1,c2 = Cookie(...)
 session.bulk_save_objects([c1,c2])
 session.commit()
+                       
 
 
 #Select statement
 cookies = session.query(Cookie).all()
-
-    
+cookie = session.query(Cookie.cookie_name,Cookie.quantity).first()
+cookies = session.query(Cookie).order_by(Cookie.quantity)
+cookies = session.query(Cookie).order_by(desc(Cookie.quantity))
+cookies = session.query(Cookie).order_by(Cookie.quantity).limit(2)
+                      
+                        
+#print([result.cookie_name for result in cookies])
+for cookie in cookies:
+    print(cookie)
+    print('{:3} - {}'.format(cookie.quantity, cookie.cookie_name))
+     
+                       
+#Database functions
+                       
+                       
