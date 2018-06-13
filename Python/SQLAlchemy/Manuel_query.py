@@ -51,5 +51,35 @@ for cookie in cookies:
      
                        
 #Database functions
+inv_count = session.query(func.sum(Cookie.quantity)).scalar()
+print(inv_count)
+rec_count = session.query(func.count(Cookie.cookie_name)).first()
+rec_count = session.query(func.count(Cookie.cookie_name).label('inventory_count')).first()
+print(rec_count.keys())
+print(rec_count.inventory_count)
+record = session.query(Cookie).filter_by(cookie_name='chocolate chip').first()                       
+record = session.query(Cookie).filter(cookie_name == 'chocolate chip').first()
+cookies = session.query(Cookie).filter(Cookie.cookie_name.like('%chocolate%')) 
+query = session.query(Cookie.cookie_name, cast((Cookie.quantity * Cookie.unit_cost),Numeric(12,2)).label('inv_cost'))  
+#OR(or_) AND(and_) NOT(not_)                      
+query = session.query(Cookie).filter(or_(Cookie.quantity.between(10,50),Cookie.cookie_name.contains('chip')))
+#Others functions
+between(cleft,cright) : find where the column is between cleft and cright                       
+distinct()            : find only unique values for column             
+in_([list])           :  find where the column is in the list                    
+is_(None)             : find where column is None                      
+contains('string')    : find where the column has 'string in it, Case sensitive                      
+endswitch('string')   : find where column end with 'string', Case sensitive                       
+startswitch('string')                       
+                       
+ #UPDATE                       
+ cc_cookie = session.query(Cookie).filer(...).first()
+ cc_cookie.quantity = cc_cookie.quantity + 120
+ session.commit()
+
+ #DELETE
+ dcc_cookie = session.query(Cookie).filter(Cookie.cookie_name == "peanut butter").one()                      
+ session.delete(dcc_cookie)
+ session.commit()                      
                        
                        
