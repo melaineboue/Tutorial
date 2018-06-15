@@ -82,4 +82,5 @@ startswitch('string')
  session.delete(dcc_cookie)
  session.commit()                      
                        
-                       
+Good example               
+http://www.leeladharan.com/sqlalchemy-query-with-or-and-like-common-filters
