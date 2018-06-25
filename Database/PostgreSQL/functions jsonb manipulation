@@ -7,3 +7,6 @@ json_extract_path_text('{"f2":{"f3":1},"f4":{"f5":99,"f6":"foo"}}','f4', 'f6')  
 
 #Convertir en Number avant de faire les sommes et autres
 to_number('12,454', '999');
+
+#Example Requête
+SELECT q.id, d.key, d.value FROM q JOIN json_each_text(q.data) d ON true ORDER BY 1, 2;
