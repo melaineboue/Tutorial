@@ -1,0 +1,9 @@
+https://www.postgresql.org/docs/current/static/functions-json.html
+
+json_extract_path(from_json json, VARIADIC path_elems text[])
+jsonb_extract_path(from_json jsonb, VARIADIC path_elems text[])
+#Example
+json_extract_path_text('{"f2":{"f3":1},"f4":{"f5":99,"f6":"foo"}}','f4', 'f6')  : resultat : foo
+
+#Convertir en Number avant de faire les sommes et autres
+to_number('12,454', '999');
