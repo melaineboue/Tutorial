@@ -1,0 +1,2 @@
+#convertir
+cast('data_in_string' as numeric)
