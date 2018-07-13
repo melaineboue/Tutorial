@@ -23,4 +23,4 @@ let myApp = new Vue({
     }
 })
 
----methods ou computed---
+---methods ou computed ou watch---
