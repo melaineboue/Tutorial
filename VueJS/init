@@ -22,3 +22,5 @@ let myApp = new Vue({
         }
     }
 })
+
+---methods ou computed---
