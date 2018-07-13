@@ -1,1 +1,24 @@
 
+let myApp = new Vue({
+    el:'#app',
+    data:{
+        message:'ok',
+        link:'http://www.google.com',
+        messager:'messager_value',
+        source:true,
+        persons:['Boue','Melaine','M1','Rennes','Istic']
+    },
+    mounted: function(){
+        this.setInterval = setInterval(()=>{
+            this.message = "yes";
+        },1000);
+    },
+    destroy: function(){
+
+    },
+    methods:{
+        close:function () {
+            this.source = false;
+        }
+    }
+})
