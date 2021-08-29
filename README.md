@@ -10,3 +10,5 @@ Insert bootstrap and bootstrap-icons css in angular.json > styles
     <i>"node_modules/bootstrap/dist/css/bootstrap.min.css",</i><br/>
     <i>"node_modules/bootstrap-icons/font/bootstrap-icons.css"</i>
 </div>
+
+<h5><a href="https://icons.getbootstrap.com/">List icon </a></h5>
