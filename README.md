@@ -9,7 +9,7 @@ Insert bootstrap and bootstrap-icons css in angular.json > styles
 <div style="color:blue">
     <i>"node_modules/bootstrap/dist/css/bootstrap.min.css",</i><br/>
     <i>"node_modules/bootstrap-icons/font/bootstrap-icons.css"</i>
-</div>
+</div><br/>
 
 Insert bootstrap and bootstrap-icons css in angular.json > scripts
 <div style="color:blue">
